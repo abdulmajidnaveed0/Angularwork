@@ -43,7 +43,7 @@ progress[value]::-moz-progress-bar {
         #f44
       );
   
-    border-radius: 2px; 
+    /* border-radius: 2px;  */
     background-size: 35px 20px, 100% 100%, 100% 100%; 
 
     /* color: red;

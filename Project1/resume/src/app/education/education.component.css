@@ -1,6 +1,9 @@
 
-div
+div.educationroot {
+    /* border: 1px solid slateblue; */
+    padding:10px;
+}
 
-{
-    border: 1px solid slateblue;
+div.educationbox{
+    text-align: left;
 }

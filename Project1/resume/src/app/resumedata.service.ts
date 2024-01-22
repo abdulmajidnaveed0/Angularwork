@@ -15,39 +15,40 @@ export class ResumedataService {
       professionaldescription: 'Software Engineer',
       },
       about: {
-        aboutme: 'Hello! I am ABdul Majid NaVEED.. aboutme text',
+        aboutme: 'Hello! I am Abdul Majid Naveed. I am a Software Engineer with three years of experience. I have worked with C#, ASP.NET Core, Angular and SQL Server.',
         basicinformation: {
-          email: 'email@gg',
-          address: 'GTA, Ontario Canada',
-          phone: '14161234567'
+          email: 'abdulmajidnaveed01@gmail.com',
+          address: 'GTA, Ontario, Canada',
+          phone: '1416-123-4567'
         },
         
       },
       professionalskills: [ 
-        {key: 'html', value: 80},
-        {key:'javascript', value: 60},
+        {key: 'HTML', value: 80},
+        {key:'JavaScript', value: 60},
         {key:'C#',value: 80},
         {key:'SQL',value: 80},
         {key:'Angular',value: 70},
+        {key:'CSS',value:60}
       ],
       workexperience: [
         {
           company: 'Company C1',
-          duration: 'jan 2016 to jun 2016',
+          duration: 'Jan 2016 - Jun 2016',
           title: 'Software Engineer',
-          description: 'first job work describe'
+          description: 'Worked as a software engineer on various projects. Developed various features. Description of job work experience.'
         },
         {
           company: 'Company C2',
-          duration: 'jun 2016 to jun 2017',
+          duration: 'Jun 2016 - Jun 2017',
           title: 'Software Engineer',
-          description: 'second job work describe'
+          description: 'Worked as a software engineer on various projects. Developed various features. Description of job work experience. (second job work describe)'
         },
         {
           company: 'Company C3',
-          duration: 'feb 2018 to jun 2020',
-          title: 'Software Engineeeer',
-          description: 'third job work describe .....'
+          duration: 'Feb 2018 - Jun 2020',
+          title: 'Software Engineer',
+          description:  'Worked as a software engineer on various projects. Developed various features. Description of job work experience. (third job work describe)'
         },
       ],
       education: [
@@ -55,13 +56,13 @@ export class ResumedataService {
           degree: 'Masters Degree',
           duration: '2014 - 2015',
           title: 'Masters of Science in Computer Science',
-          description: 'Georgia Institute of Technology'
+          description: 'Georgia Institute of Technology, Atlanta, GA, USA'
         },
         {
           degree: 'Masters Degree',
           duration: '2008 - 2010',
-          title: 'Masters of Science in Electrical Engineering',
-          description: 'Georgia Insitute of Technology'
+          title: 'Masters of Science in Electrical and Computer Engineering',
+          description: 'Georgia Insitute of Technology, Atlanta, GA, USA'
         },
         {
           degree: 'Bachelors Degree',

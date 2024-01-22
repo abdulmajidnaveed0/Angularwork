@@ -13,9 +13,9 @@ export class AppComponent   implements OnInit {
   
   title = 'resume';
   angularversion = 'Angular' + VERSION.major;
+  debugInfo = 'This project was designed using: Angular CLI: 14.0.0 and Node v18.19.0 (npm v 10.2.3)';
 
   servicedata:any;
-
   ngOnInit() {
     this.servicedata = this.resumesrvc.getResumeData();
     this.resumeData = this.servicedata;

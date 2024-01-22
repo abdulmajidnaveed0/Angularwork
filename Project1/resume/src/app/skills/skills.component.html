@@ -1,43 +1,34 @@
-<div class="skills"> 
-<p>Professional Skills</p>
-<!-- <p>{{skills|json}}</p> -->
-<div class="grid grid-cols-4 gap-20">
+<div class="skills section"> 
+  <p class="heading">Professional Skills</p>
+  <!-- <p>{{skills|json}}</p> -->
+  <div class="grid grid-cols-4 gap-20">
 
-<div class="col-span-2">
-<ul>
-    <li 
-        *ngFor="let s of skills;let idx=index;">
-        <!-- <span>{{s|json}}</span> -->
-        <div class="col-span-2">
-        <app-skillpair *ngIf="idx%2===0"
-        [skillkey]="s.key" [skillvalue]="s.value" >
-        </app-skillpair>
-        </div>       
-    </li>
-</ul>
-</div>
-
-
-
-
-<div class="col-span-2">
-    <ul>
-        <li 
-            *ngFor="let s of skills;let idx=index;">
+    <div class="col-span-2">
+      <ul>
+        <li *ngFor="let s of skills;let idx=index;">
             <!-- <span>{{s|json}}</span> -->
             <div class="col-span-2">
-            <app-skillpair *ngIf="idx%2===1"
-            [skillkey]="s.key" [skillvalue]="s.value" >
-            </app-skillpair>
-            </div>
+              <app-skillpair *ngIf="idx%2===0"
+                [skillkey]="s.key" [skillvalue]="s.value" >
+              </app-skillpair>
+            </div>       
         </li>
-    </ul>
+      </ul>
     </div>
-</div>
 
+    <div class="col-span-2">
+        <ul>
+            <li *ngFor="let s of skills;let idx=index;">
+                <!-- <span>{{s|json}}</span> -->
+                <div class="col-span-2">
+                  <app-skillpair *ngIf="idx%2===1"
+                    [skillkey]="s.key" [skillvalue]="s.value" >
+                  </app-skillpair>
+                </div>
+            </li>
+        </ul>
+    </div>
 
-<!-- <app-skillpair skillkey="'aa'" skillvalue="'val'"></app-skillpair>
-<app-skillpair></app-skillpair>
-<app-skillpair></app-skillpair>
-<app-skillpair></app-skillpair> -->
+  </div>
+  <!-- <app-skillpair skillkey="'aa'" skillvalue="'val'"></app-skillpair> -->
 </div>

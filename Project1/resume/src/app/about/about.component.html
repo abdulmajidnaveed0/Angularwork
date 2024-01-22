@@ -1,17 +1,14 @@
 
-<div class="grid grid-cols-2 gap-2">
-    <!-- <h1>About</h1> -->
+<div class="aboutroot section   grid grid-cols-2 gap-2">
 <div class="section1">
     <p class="heading">About</p>
-    <!-- <p>Hello I am sdfkj</p> -->
-    <!-- <p>{{about | json}}</p> -->
-    <p>{{about.aboutme|json}}</p>
+    <p>{{about.aboutme}}</p>
 </div>
 <div class="section2">
     <p class="heading">Basic Information</p>
-    <app-infopair [infokey]="'email'" [infovalue]="about.basicinformation.email"></app-infopair>
-    <app-infopair [infokey]="'address'" [infovalue]="about.basicinformation.address"></app-infopair>
-    <app-infopair [infokey]="'phone'" [infovalue]="about.basicinformation.phone"></app-infopair>
+    <app-infopair [infokey]="'Email'" [infovalue]="about.basicinformation.email"></app-infopair>
+    <app-infopair [infokey]="'Address'" [infovalue]="about.basicinformation.address"></app-infopair>
+    <app-infopair [infokey]="'Phone'" [infovalue]="about.basicinformation.phone"></app-infopair>
 
 </div>
 </div>

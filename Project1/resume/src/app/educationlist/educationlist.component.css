@@ -1,10 +1,16 @@
 
-div {
+/* div {
     background-color: darkorange;
-}
+} */
 
 ul {
-    list-style-type: none; /* Remove bullets */
+  list-style-type: none; /* Remove bullets */
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
+}
+
+div  p.heading {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }

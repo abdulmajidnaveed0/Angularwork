@@ -1,6 +1,14 @@
 
-div
+div.experienceroot {
+    /* border: 1px solid slateblue; */
+    padding: 10px;
+}
 
-{
-    border: 1px solid slateblue;
+p.largeheading{
+    font-size: 22px;
+    font-weight: light;
+}
+
+div.experiencebox{
+    text-align: left;
 }

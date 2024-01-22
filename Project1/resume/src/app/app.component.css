@@ -1,8 +1,21 @@
-div 
-{
+div {
     background-color:blanchedalmond;
-    border:1px solid red;
+    /* border:1px solid red; */
     box-sizing: border-box;
     text-align: center;
     padding: 10px 10px;
+}
+
+div.debug {
+    border: 1px solid red;
+    background-color: burlywood;
+}
+
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
