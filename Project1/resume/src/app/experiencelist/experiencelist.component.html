@@ -1,0 +1,23 @@
+
+<div> 
+<p>experiencelist {{experience|json}}</p>
+
+<ul>
+    <li 
+        *ngFor="let e of experience">
+        <!-- <span>{{s|json}}</span> -->
+        <app-experience 
+        [company]="e.company" [duration]="e.duration" 
+        [title]="e.title" [description]="e.description"
+        >
+        </app-experience>
+        <!-- <span>{{e|json}}</span> -->
+    </li>
+</ul>
+
+
+<!-- <app-experience></app-experience> 
+<app-experience></app-experience> 
+<app-experience></app-experience> 
+<app-experience></app-experience>  -->
+</div>

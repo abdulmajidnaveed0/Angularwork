@@ -1,0 +1,28 @@
+div
+{
+    
+background-color: aquamarine;
+border: 1px solid blueviolet;
+padding: 2px;
+text-align: left;
+}
+/* 
+div.col1 {
+  display:block ;
+ 
+} */
+div.section1 p.about {
+  font-size: 20px;
+  font-weight: bold;
+}
+/*
+div.col1 h1{
+  
+} */
+div  p.heading {
+  font-size: 20px;
+  font-weight: bold;
+}
+/* div.col2 {
+  display:block ;
+} */

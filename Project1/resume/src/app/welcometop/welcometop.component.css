@@ -1,0 +1,22 @@
+div
+{
+    background-color: cyan;
+    border: 1px solid seagreen;
+    margin: 05px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+p.name
+{
+    font-size: 18px;
+    font-weight:bold;
+    color:deepskyblue;
+
+}
+
+img{
+    width:10%;
+    margin:0 auto;
+    border-radius: 50%;
+}

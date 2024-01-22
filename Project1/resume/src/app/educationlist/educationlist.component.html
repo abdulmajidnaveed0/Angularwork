@@ -1,0 +1,18 @@
+<div>
+<p>Educations {{education|json}} </p>
+<ul>
+    <li 
+        *ngFor="let e of education">
+        <!-- <span>{{s|json}}</span> -->
+        <app-education 
+        [degree]="e.degree" [duration]="e.duration" 
+        [title]="e.title" [description]="e.description"
+        >
+        </app-education>
+    </li>
+</ul>
+<!-- <app-education></app-education>
+<app-education></app-education>
+<app-education></app-education>
+<app-education></app-education> -->
+</div>
