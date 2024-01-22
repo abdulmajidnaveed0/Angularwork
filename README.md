@@ -4,7 +4,12 @@ Code for Angular
 
 This repository is for Angular projects.
 
-https://stackblitz.com/github/abdulmajidnaveed0/Angularwork/tree/main/Project1/resume?file=README.md
+https://stackblitz.com/github/abdulmajidnaveed0/Angularwork/tree/main/Project1/resume
 
+
+Angular CLI 14.0.0 and Node v18.19.0 (npm v 10.2.3), and Tailwind CSS was used.
+
+
+----------------------------------------------------------------------------------------------------------------
 
 
