@@ -1,0 +1,84 @@
+
+<div *ngIf="currentJob" class="edit-form">
+    <h4>Job Details</h4>
+    <form>
+      <div class="form-group">
+        <label for="jdtitle">Job Title</label>
+        <input
+          type="text"
+          class="form-control"
+          _id="_title"
+          [(ngModel)]="currentJob.jobtitle"
+          name="jdtitle"
+        />
+      </div>
+      <div class="form-group">
+        <label for="jdcategory">Job Category</label>
+        <!-- <input
+          type="text"
+          class="form-control"
+          _id="_category"
+          [(ngModel)]="currentJob.category"
+          name="jdcategory"
+        /> -->
+        <select
+        class="form-control"
+        _id="_scategory"
+        [(ngModel)]="currentJob.category"
+        name="jdscategory"
+      >
+        <option value="Backend">Backend</option>
+        <option value="Frontend">Frontend</option>
+        <option value="FullStack">FullStack</option>
+      </select>        
+
+      </div>
+      <div class="form-group">
+        <label for="jdjobid">Job Id</label>
+        <input
+          type="text"
+          class="form-control"
+          _id="_jobid"
+          required
+          [(ngModel)]="currentJob.jobid"
+          name="jdjobid"
+        />
+      </div>
+      
+
+      <div class="form-group">
+        <label><strong>Status:</strong></label>
+        {{ currentJob.published ? "Published" : "Unpublished" }}
+      </div>
+    </form>
+  
+    <button
+     *ngIf="currentJob.published"
+      class="badge badge-primary mr-2"
+      (click)="updatePublished(false)"
+    >
+      Unpublish
+    </button>
+    <button
+      *ngIf="!currentJob.published"
+      class="badge badge-primary mr-2"
+      (click)="updatePublished(true)"
+    >
+      Publish
+    </button>
+  
+    <button class="badge badge-danger mr-2" (click)="deleteJob()">
+      Delete
+    </button>
+  
+    <button type="submit" class="badge badge-success" (click)="updateJob()">
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+  
+  <div *ngIf="!currentJob">
+    <br />
+    <p>Cannot access this Job.</p>
+  </div>
+  
