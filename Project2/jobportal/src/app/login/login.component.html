@@ -1,0 +1,42 @@
+
+
+<div class="row mx-auto">
+  <h2 class="textcenter">Login</h2>
+</div>
+
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+
+  <div class="col-md-5 mx-auto">
+    <div class="form-group " >
+      <label>Enter username</label>
+      <input
+      type="text"
+      class="form-control"
+      _id="_title"
+      [(ngModel)]="inputUsername"
+      />
+      
+    </div>
+    <div>
+      <label>Enter password</label>
+      <input
+      type="password"
+      class="form-control"
+      _id="_title"
+      [(ngModel)]="inputPassword"
+      />
+    </div>
+    <button (click)="login()" class="btn btn-link">Login</button>
+    <button (click)="logout()" class="btn btn-link">Logout</button>
+    <!-- <button (click)="showauth()"></button> -->
+    <!-- <pre>
+      {{authout|json}} {{inputUsername}} {{inputPassword}}
+    </pre> -->
+  </div>
+</div>
+
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+  <div>
+    <p>{{message}}</p>
+  </div>
+</div>
