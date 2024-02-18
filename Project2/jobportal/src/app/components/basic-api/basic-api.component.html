@@ -1,0 +1,84 @@
+
+
+<div style=" background-color: #99c8f7;padding: 5px;">
+  <p>basic-api works!</p>
+
+  <div>
+    <button (click)="onB1ClickReadUsers()" type="button" class="btn btn-dark">
+      Check Realtime Db B0 Read Db Users
+    </button>
+    <br>
+    <input type="text" [(ngModel)]="user.name" name="username" class="form-control" placeholder="user name" />
+    <input type="text" [(ngModel)]="user.username" name="longname" class="form-control" placeholder="name" />
+    <input type="email" [(ngModel)]="user.jbdscr" name="jbdscr" class="form-control" placeholder="job descr" />
+    <button (click)="onB2ClickWriteDb()" type="button" class="btn btn-dark">
+      Check Fb RtDb B2 Write Db
+    </button><br>
+    <span>{{user|json}}</span><br>
+    <button (click)="onB3ClickReadDbGetKey(readkey)" type="button" class="btn btn-dark">
+      Check Firebase B3 Read Key
+    </button>
+    <input type="text" [(ngModel)]="readkey" name="readkey" class="form-control" placeholder="user name" />
+    <br>
+    <span>{{readkey|json}}</span><br>
+  
+  
+  
+  
+  
+  
+    <button (click)="TestRetrieve()" type="button" class="btn btn-dark">
+      Test GetAll
+    </button>
+    <button (click)="TestDelete()" type="button" class="btn btn-dark">
+      Test Delete
+    </button>
+    <div>
+        <!-- {{ usersFromDb |async  }} -->
+      usersFromDb:
+      <li *ngFor="let u of usersFromDb|async" >
+      {{ (u | json)  }}</li>
+      jobsFromDb:
+      <li *ngFor="let j of jobsFromDb|async" >
+        {{ (j | json)  }}</li>
+      jobsList:
+  
+      <!-- <li *ngFor="let j of jobsList" >
+          {{ (j | json)  }}</li> -->
+      </div>
+  
+      <button (click)="TestPush()" type="button" class="btn btn-dark">
+        Push
+      </button>
+      <button (click)="TestUpdate()" type="button" class="btn btn-dark">
+        Update
+      </button>
+    
+  
+  </div>
+
+
+  <div class="app-debug">
+    <div>
+     <p> users: {{users1|json}}</p>
+    </div>
+    
+    <div>
+      users2$: {{users2$|async|json}}
+    </div>
+    <div *ngIf="error" class="alert alert-danger" role="alert">An API failed</div>
+    <div *ngIf="users2$ | async as users" class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <ul class="list-group">
+            <li *ngFor="let user of users" class="list-group-item">
+              {{ user.first_name }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  </div>  
+
+</div>
