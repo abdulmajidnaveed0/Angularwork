@@ -1,8 +1,14 @@
 
 .appcontainer { 
-background-color:bisque;
+  background-color:bisque;
+  margin: 30px;
 }
 
 .app-debug {
     background-color: floralwhite;
+}
+
+.viewcontainer {
+    background-color:#74d5f0;
+    padding: 5px;
 }

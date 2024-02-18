@@ -3,37 +3,19 @@
   <p>App component </p>
   <a routerLink="/">Home</a> &nbsp; 
   <a routerLink="/admin">Admin</a> &nbsp;
+  <a routerLink="/login">Login</a> &nbsp;
 </div>
 
-<div style="background-color:#1976d2;padding: 5px;">
-  Router Outlet here
+<!-- #1976d2 -->
+<!-- style="background-color:#74d5f0;padding: 5px;" -->
+<div class= "viewcontainer">
+  <!-- Router Outlet here -->
   <router-outlet></router-outlet>
-  Router Outlet ends here
+  <!-- Router Outlet ends here -->
 </div>
 
-<div class="app-debug">
-<div>
- <p> title:{{title}}</p>
- <p> users: {{users|json}}</p>
-</div>
 
-<div>
-  users2$: {{users2$|async|json}}
-</div>
-<div *ngIf="error" class="alert alert-danger" role="alert">An API failed</div>
-<div *ngIf="users2$ | async as users" class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <ul class="list-group">
-        <li *ngFor="let user of users" class="list-group-item">
-          {{ user.first_name }}
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
 
-</div>
 
 
 
