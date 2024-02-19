@@ -23,7 +23,6 @@ export class LoginguardService implements CanActivate {
     ): boolean | Observable<boolean> | Promise<boolean> | any{
       console.log('loginguard/canActivate');
       return this.authService.isAuthenticatedAdmin().then(  (auth) => {
-        //console.log('auth:',auth)
         if (auth==='admin') {
           return true;
         } else {
@@ -33,7 +32,6 @@ export class LoginguardService implements CanActivate {
         }
       }, (auth)=>{
         console.log('guard rejected:',auth)
-        //console.log('auth failed');
         this.router.navigate(['/login']);
 
     }   );

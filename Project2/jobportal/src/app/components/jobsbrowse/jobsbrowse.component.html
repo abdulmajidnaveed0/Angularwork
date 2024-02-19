@@ -1,89 +1,51 @@
+
 <div>
-  
   <div class="row mx-auto">
     <h2 class="textcenter">View Jobs</h2>
   </div>
-  <div class="col-md-5 mx-auto">
-    <!-- <h2 class="textcenter">View Jobs List</h2> -->
 
+  <div class="col-md-5 mx-auto">
     <table class="table table-striped">
       <thead class="thead-light">
         <tr class="header">
-            <th class="col-md-1">
+          <th class="col-md-1">
             <input [(ngModel)]="searchTitle"
-            type="text" placeholder="Search Title" (keypress)="updateView()"
-             /></th>
-            <th class="col-md-1">
+              type="text" placeholder="Search Title" (keypress)="updateView()"
+            />
+          </th>
+          <th class="col-md-1">
             <select 
-            [(ngModel)]="searchCategory"
-            name="filterjobcategory" id="s"
-            (change)="updateView()"
+              [(ngModel)]="searchCategory"
+              name="filterjobcategory"
+              (change)="updateView()"
             >
-            <option value="all" selected>All</option>
-            <option value="backend">Backend</option>
-            <option value="Frontend">Frontend</option>
-            <option value="fullStack">FullStack</option>
-          </select></th>
-          <th class="col-md-1"><input [(ngModel)]="searchId"
-          type="text" placeholder="Search Id" (keypress)="updateView()"
-           /></th>
-    
+              <option value="all" selected>All</option>
+              <option value="backend">Backend</option>
+              <option value="Frontend">Frontend</option>
+              <option value="fullStack">FullStack</option>
+            </select>
+          </th>
+          <th class="col-md-1">
+            <input [(ngModel)]="searchId"
+              type="text" placeholder="Search Id" (keypress)="updateView()"
+            />
+          </th>
         </tr>
-      <tr class="header">
-        <th class="col-md-1">Title</th>
-        <th class="col-md-1">Category</th>
-        <th class="col-md-1">Id</th>
-      </tr>
+        <tr class="header">
+          <th class="col-md-1">Title</th>
+          <th class="col-md-1">Category</th>
+          <th class="col-md-1">Id</th>
+        </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let job of filteredJobsList;"
-        > 
-        <td>{{job.jobtitle}}</td>
-        <td>{{job.category}}</td>
-        <td>{{job.jobid}}</td>
+        <tr *ngFor="let job of filteredJobsList;"> 
+          <td>{{job.jobtitle}}</td>
+          <td>{{job.category}}</td>
+          <td>{{job.jobid}}</td>
         </tr>
       </tbody>
-
     </table>
   </div>
-
-  <!-- 
-  <div class="list row" style="display:none">
-        <div class="col-md-5">
-            <h4>Jobs List</h4>
-            <ul class="list-group">
-              <li
-                class="list-group-item"
-                *ngFor="let job of jobsList; let i = index"
-                [class.active]="i == currentIndex"
-                (click)="setActiveJob(job, i)"
-              >
-              {{ job|json }}
-              </li>
-            </ul>
-    
-            <button class="m-3 btn btn-sm btn-danger" 
-            (click)="removeAllJobs()">
-              Remove All Jobs
-            </button>    
-    
-          </div>
-    
-          <div class="col-md-6">
-            <div *ngIf="currentJob">
-              <app-jobdetails
-              (refreshList)="refreshList()"
-              [job]="currentJob"
-              ></app-jobdetails>
-            </div>
-        
-            <div *ngIf="!currentJob">
-              <br />
-              <p>Please click on a Job...</p>
-            </div>
-          </div>
-  </div>-->
-
 </div>
     
     

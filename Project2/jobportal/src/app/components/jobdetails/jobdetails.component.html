@@ -4,10 +4,7 @@
     <form>
       <div class="form-group">
         <label for="jdtitle">Job Title</label>
-        <input
-          type="text"
-          class="form-control"
-          _id="_title"
+        <input type="text" class="form-control"
           [(ngModel)]="currentJob.jobtitle"
           name="jdtitle"
         />
@@ -15,15 +12,11 @@
       <div class="form-group">
         <label for="jdcategory">Job Category</label>
         <!-- <input
-          type="text"
-          class="form-control"
-          _id="_category"
+          type="text" class="form-control"
           [(ngModel)]="currentJob.category"
           name="jdcategory"
         /> -->
-        <select
-        class="form-control"
-        _id="_scategory"
+        <select class="form-control"
         [(ngModel)]="currentJob.category"
         name="jdscategory"
       >
@@ -35,16 +28,12 @@
       </div>
       <div class="form-group">
         <label for="jdjobid">Job Id</label>
-        <input
-          type="text"
-          class="form-control"
-          _id="_jobid"
+        <input type="text" class="form-control"
           required
           [(ngModel)]="currentJob.jobid"
           name="jdjobid"
         />
       </div>
-      
 
       <div class="form-group">
         <label><strong>Status:</strong></label>
@@ -52,16 +41,12 @@
       </div>
     </form>
   
-    <button
-     *ngIf="currentJob.published"
-      class="badge badge-primary mr-2"
+    <button *ngIf="currentJob.published" class="badge badge-primary mr-2"
       (click)="updatePublished(false)"
     >
       Unpublish
     </button>
-    <button
-      *ngIf="!currentJob.published"
-      class="badge badge-primary mr-2"
+    <button *ngIf="!currentJob.published" class="badge badge-primary mr-2"
       (click)="updatePublished(true)"
     >
       Publish

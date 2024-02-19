@@ -67,6 +67,28 @@ export class LoginAuthService {
     })
   }
 
+  logout() {
+    this.resetLoggedinState()
+  }
+  isAuthenticatedAdmin(){
+    const promise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (this.loggedIn && this.isAdminUser) { 
+          resolve('admin');
+        } else if (this.loggedIn && !this.isAdminUser) {
+          resolve('user')
+        }
+        else reject('not logged in');
+      }, 0);
+    });
+    return promise;
+  }
+  private resetLoggedinState(){
+    this.loggedIn = false;
+    this.isAdminUser=false;
+    this.userName=null;
+  }
+
   // login(inputUsername:string,inputPassword:string) {
   //   console.log('loginauth/login')
   //   console.log(`user entered: ${inputUsername} ${inputPassword}`)
@@ -86,30 +108,7 @@ export class LoginAuthService {
   //       reject("failed")}
   //   })
   // }
-  logout() {
-    this.resetLoggedinState()
-  }
-  isAuthenticatedAdmin(){
-    //console.log('loginauth/isAuthenticatedAdmin')
-    const promise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        //console.log(`loggedIn: ${this.loggedIn}, isAdmin: ${this.isAdminUser}`)
-        if (this.loggedIn && this.isAdminUser) { 
-          resolve('admin');
-        } else if (this.loggedIn && !this.isAdminUser) {
-          resolve('user')
-        }
-        else reject('not logged in');
-      }, 0);
-    });
-    //console.log('end of isAuthenticatedAdmin')
-    return promise;
-  }
-  private resetLoggedinState(){
-    this.loggedIn = false;
-    this.isAdminUser=false;
-    this.userName=null;
-  }
+  
   // isAuthenticated()  {
   //   console.log('loginauth/isAuthenticated')
   //   const promise = new Promise((resolve, reject) => {

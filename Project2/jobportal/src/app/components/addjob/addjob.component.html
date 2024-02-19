@@ -1,6 +1,4 @@
 
-<!-- <p>addjob works!</p> -->
-
 <div class="row mx-auto">
   <h2 class="textcenter">Add Job</h2>
 </div>
@@ -21,10 +19,8 @@
             name="userjobtitle"
           />
           <!--  [(ngModel)]="job.jobtitle" 
-                      _id="a_title"
-            name="ajobtitle_rf"
           -->
-          <span *ngIf="jobtitleIsValid" class="help-block">
+          <span *ngIf="jobtitleIsNotValid" class="help-block">
             Please enter valid job title
           </span>
         </div>
@@ -33,10 +29,8 @@
           <label for="a2jobcategory">Category</label>
           <!-- <input
             class="form-control"
-            _id="a_category"
             required
             [(ngModel)]="job.category"
-            name="ajobcategory"
           /> -->
           <select
           class="form-control"
@@ -47,8 +41,7 @@
           <option value="Frontend">Frontend</option>
           <option value="FullStack">FullStack</option>
         </select>
-        <!-- _id="a_scategory"
-        [(ngModel)]="job.category" -->
+        <!-- [(ngModel)]="job.category" -->
         </div>
 
         <div class="form-group">
@@ -62,22 +55,25 @@
             name="userjobid"
           />
           <!-- [(ngModel)]="job.jobid"
-            _id="a_jobid" 
-            name="ajobid"
           -->
-          <span
-          *ngIf="
-            !signupForm.get('userData.userjobid')?.valid &&
-            signupForm.get('userData.userjobid')?.touched
-          "
-          class="help-block"
-        >
-          Please enter a valid JobId
-        </span>
+          <span *ngIf=" jobIdIsNotValid " class="help-block" >
+            Please enter a valid JobId
+          </span>
+          <!-- <span (click)="check()">check</span> -->
+
+        <!-- <span
+        *ngIf="
+          !signupForm.get('userData.userjobid')?.valid &&
+          signupForm.get('userData.userjobid')?.touched && 
+          jobIdIsValid
+        "
+        class="help-block"
+      >
+        Please enter a valid JobId
+      </span> -->
 
         </div>
     
-
         <div class="row mx-auto">
 
         <!-- <button (click)="saveJob()" class="btn btn-success">Submit</button> -->

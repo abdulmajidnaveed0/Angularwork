@@ -1,10 +1,7 @@
-//import { Component, OnInit } from '@angular/core';
 import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angular/core';
 
 import { JobserviceService } from '../../services/jobservice.service';
 import {Job} from '../../models/job.model';
-
-
 
 @Component({
   selector: 'app-jobdetails',
@@ -47,14 +44,10 @@ export class JobdetailsComponent implements OnInit {
 
   updateJob(): void {
     const data = {
-      // title: this.currentJob.title,
-      // description: this.currentJob.description,
       jobid:this.currentJob.jobid,
       jobtitle:this.currentJob.jobtitle,
       category:this.currentJob.category,
-
     };
-
     if (this.currentJob.key) {
       this.jobService.updateJob(this.currentJob.key, data)
         .then(() => this.message = 'The job was updated successfully!.')
@@ -67,7 +60,7 @@ export class JobdetailsComponent implements OnInit {
       this.jobService.deleteJob(this.currentJob.key)
         .then(() => {
           this.refreshList.emit();
-          this.message = 'The job was delete-updated successfully!.';
+          this.message = 'The job was deleted successfully!.';
         })
         .catch(err => console.log(err));
     }

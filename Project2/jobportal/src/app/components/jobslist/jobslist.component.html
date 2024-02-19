@@ -1,17 +1,12 @@
 
 <div class="jobslistcontainer">
 
-  <!-- <li *ngFor="let j of jobsList" >
-      {{ (j | json)  }}</li> -->
-      
   <div class="row mx-auto">
     <h2 class="textcenter">Manage Jobs</h2>
   </div>
 
-<div class="list row">
-
+  <div class="list row">
     <div class="col-md-5">
-        <!-- <h4>Jobs List</h4> -->
         <ul class="list-group">
           <li
             class="list-group-item"
@@ -26,23 +21,21 @@
         <button class="m-3 btn btn-sm btn-danger" 
         (click)="removeAllJobs()">
           Remove All Jobs
-        </button>    
-
-      </div>
-
-      <div class="col-md-6">
-        <div *ngIf="currentJob">
-          <app-jobdetails
+        </button>
+    </div>
+    <div class="col-md-6">
+      <div *ngIf="currentJob">
+        <app-jobdetails
           (refreshList)="refreshList()"
           [job]="currentJob"
-          ></app-jobdetails>
-        </div>
-    
-        <div *ngIf="!currentJob">
-          <br />
-          <p>Please select a Job.</p>
-        </div>
+        ></app-jobdetails>
       </div>
-</div>
+  
+      <div *ngIf="!currentJob">
+        <br />
+        <p>Please select a Job.</p>
+      </div>
+    </div>
+  </div>
 </div>
 

@@ -9,6 +9,7 @@ import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
   templateUrl: './addjob.component.html',
   styleUrls: ['./addjob.component.css']
 })
+
 export class AddjobComponent implements OnInit {
 
   job: Job = new Job();
@@ -28,12 +29,30 @@ export class AddjobComponent implements OnInit {
       })
     })
   }
-get jobtitleIsValid(){
-  return (
-    this.signupForm.get('userData.userjobtitle')?.touched && 
-    !this.signupForm.get('userData.userjobtitle')?.valid
-  );
-}
+
+  get jobtitleIsNotValid(){
+    return (
+      this.signupForm.get('userData.userjobtitle')?.touched && 
+      !this.signupForm.get('userData.userjobtitle')?.valid
+    );
+  }
+
+  idsNotAllowedList =['0','jobid']
+  get jobIdIsNotValid(){
+    // !signupForm.get('userData.userjobid')?.valid &&
+    // signupForm.get('userData.userjobid')?.touched && 
+    return (
+      this.signupForm.get('userData.userjobid')?.touched && 
+      !(this.signupForm.get('userData.userjobid')?.valid &&
+      this.isValidId(this.signupForm.get('userData.userjobid')?.value))
+    )
+  }
+  private isValidId(idvalue:string){
+    let ret ;
+    if (!idvalue || idvalue ===null) ret = false;
+    else ret= this.idsNotAllowedList.indexOf(idvalue)===-1;
+    return ret;
+  }
 
   saveJob(): void {
     this.jobService.createJob(this.job).then(() => {
